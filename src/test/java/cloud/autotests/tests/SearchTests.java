@@ -4,6 +4,7 @@ import cloud.autotests.selectors.MainPageSelectors;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import com.github.javafaker.Faker;
+import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -29,6 +30,7 @@ public class SearchTests extends TestBase implements
     })
     @DisplayName("Search with valid value")
     @ParameterizedTest(name = "find all elements containing the query phrase: {0}")
+    @AllureId("11531")
     void positiveTest1(String valueName) {
         step("Search request sending", () -> {
             open("");
@@ -41,6 +43,7 @@ public class SearchTests extends TestBase implements
     }
 
     @Test
+    @AllureId("11535")
     @DisplayName("Search with invalid value")
     void noResultsTest() {
         Faker faker = new Faker();

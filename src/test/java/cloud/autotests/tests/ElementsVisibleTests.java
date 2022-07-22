@@ -6,6 +6,7 @@ import cloud.autotests.selectors.TagsPageSelectors;
 import cloud.autotests.selectors.QuestionsPageSelectors;
 import cloud.autotests.selectors.UnansweredPageSelectors;
 import cloud.autotests.selectors.UsersPageSelectors;
+import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -21,6 +22,7 @@ public class ElementsVisibleTests extends TestBase implements
         MainPageSelectors, QuestionsPageSelectors, TagsPageSelectors, UsersPageSelectors, UnansweredPageSelectors {
 
     @Test
+    @AllureId("11528")
     @DisplayName("Check the presence of the main elements on the home page")
     void mainPageTest() {
         step("main page open", () -> {
@@ -55,6 +57,7 @@ public class ElementsVisibleTests extends TestBase implements
     }
 
     @Test
+    @AllureId("11533")
     @DisplayName("Check the presence of the main elements on the questions page")
     void questionsPageTest() {
         step("questions page open", () -> {
@@ -72,6 +75,7 @@ public class ElementsVisibleTests extends TestBase implements
     }
 
     @Test
+    @AllureId("11529")
     @DisplayName("Check the presence of the main elements on the tags page")
     void tagsPageTest() {
         step("tags page open", () -> {
@@ -89,6 +93,7 @@ public class ElementsVisibleTests extends TestBase implements
     }
 
     @Test
+    @AllureId("11534")
     @DisplayName("Check the presence of the main elements on the users page")
     void usersPageTest() {
         step("users page open", () -> {
@@ -107,6 +112,7 @@ public class ElementsVisibleTests extends TestBase implements
     }
 
     @Test
+    @AllureId("11532")
     @DisplayName("Check the presence of the main elements on the unanswered page")
     void unansweredPageTest() {
         step("users page open", () -> {
@@ -124,6 +130,7 @@ public class ElementsVisibleTests extends TestBase implements
     }
 
     @Test
+    @AllureId("11530")
     @DisplayName("Page title should have header text")
     void titleTest() {
         step("main page open", () -> {
@@ -139,6 +146,7 @@ public class ElementsVisibleTests extends TestBase implements
     }
 
     @Test
+    @AllureId("11527")
     @DisplayName("Page console log should not have errors")
     void consoleShouldNotHaveErrorsTest() {
         step("main page open", () -> {

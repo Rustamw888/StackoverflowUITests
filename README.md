@@ -35,15 +35,16 @@
 
 ## :rocket: Реализованные проверки это UI тесты
 ![This is an image](https://i.imgur.com/Dd62Cq5.png)
-- Наличие основных элементов раздела
-- Наличие основных элементов раздела "Card tab testing"
-- Наличие основных элементов раздела "Deposits tab testing"
-- Наличие основных элементов раздела "Investments tab testing"
-- Наличие текста главной страницы "Main page headers checking"
-- Отсутствие ошибок в консоли "Clear console log"
+- Наличие основных элементов главной страницы
+- Наличие основных элементов страницы вопросов
+- Наличие основных элементов страницы меток
+- Наличие основных элементов страницы участников
+- Наличие основных элементов страницы неотвеченные
+- Результаты работы поиска с валидными данными
+- Результаты работы поиска с невалидными данными
 
 ## :rocket: Сборка в Jenkins
-### <a target="_blank" href="https://jenkins.autotests.cloud/job/AUTO-Rustam/">Сборка в Jenkins</a>
+### <a target="_blank" href="https://jenkins.autotests.cloud/job/StackoverflowUITests/">Сборка в Jenkins</a>
 <p align="center">
 <img title="Jenkins Dashboard" src="images/screenshots/jenkins_dashboard.png">
 </p>
@@ -59,13 +60,13 @@
 ## :rocket: Запуск из терминала
 Локальный запуск:
 ```
-gradle clean sof
+gradle clean test
 ```
 
 Удаленный запуск:
 ```
 clean
-sof
+test
 -Dbrowser=${BROWSER}
 -DbrowserVersion=${BROWSER_VERSION}
 -DbrowserSize=${BROWSER_SIZE}
@@ -81,30 +82,46 @@ sof
 <img title="Allure Overview Dashboard" src="images/screenshots/report_main_page.png">
 </p>
 
-- ### Страница с проведенными тестами
+- ### Страница с проведенными тестами (suites)
 <p align="center">
-<img title="Allure Test Page" src="images/screenshots/report_tests_page.png">
+<img title="Allure Test Page" src="images/screenshots/allure_suites_1.png">
+<img title="Allure Test Page" src="images/screenshots/allure_suites_2.png">
+</p>
+
+- ### Страница с пакетами тестов
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/screenshots/allure_packages.png">
+</p>
+
+- ### Страница с графиком прохождения тестов
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/screenshots/allure_schedule.png">
 </p>
 
 ## :rocket: Интеграция с Allure TestOps
 - ### Экран с результатами запуска тестов
 <p align="center">
-<img title="TestOps Launch Page" src="images/screenshots/test_ops_launch_page.png">
+<img title="TestOps Launch Page" src="images/screenshots/test_results_ATO.png">
 </p>
 
-- ### Страница с тестами в TestOps
+- ### Экран с launches после интеграции с IDE + график
 <p align="center">
-<img title="TestOps tests page" src="images/screenshots/test_ops_tests_page.png">
+<img title="TestOps Launch Page" src="images/screenshots/launches_ATO.png">
 </p>
 
-- ### Страница с тестами в TestOps auto + manual
+- ### Экран с дашбордами и тестами в TestOps auto + manual
 <p align="center">
-<img title="TestOps tests page" src="images/screenshots/test_ops_manual.png">
+<img title="TestOps Launch Page" src="images/screenshots/dashboards_ATO.png">
 </p>
 
-- ### Экран с результатами запуска тестов auto + manual
+- ### Страница с тест кейсами в TestOps
 <p align="center">
-<img title="TestOps Launch Page" src="images/screenshots/allure_manual_results.png">
+<img title="TestOps tests page" src="images/screenshots/test_cases_ATO.png">
+</p>
+
+- ### Страница с тест ранами в TestOps auto + manual
+<p align="center">
+<img title="TestOps tests page" src="images/screenshots/test_runs_ATO.png">
 </p>
 
 ## :rocket: Интеграция с Jira
@@ -120,6 +137,7 @@ sof
 
 ## :rocket: Видео примеры прохождения тестов
 > К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
+> На данный момент школьный ресурс оптимизируется, я предоставил результаты своей работы невзирая на преграды.
 <p align="center">
   <img title="Selenoid Video" src="images/gif/test_result.gif">
 </p>
