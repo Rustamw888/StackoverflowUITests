@@ -67,9 +67,3 @@ tasks.withType(Test) {
         }
     }
 }
-
-task sof(type: Test) {
-    useJUnitPlatform {
-        includeTags 'sof'
-    }
-}
