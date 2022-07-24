@@ -82,50 +82,50 @@ test
 <img title="Allure Overview Dashboard" src="images/screenshots/report_main_page.png">
 </p>
 
-- ### Страница с проведенными тестами (suites)
+- ### Проведенные тесты (suites)
 <p align="center">
 <img title="Allure Test Page" src="images/screenshots/allure_suites_1.png">
 <img title="Allure Test Page" src="images/screenshots/allure_suites_2.png">
 </p>
 
-- ### Страница с пакетами тестов
+- ### Пакетами тестов
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screenshots/allure_packages.png">
 </p>
 
-- ### Страница с графиком прохождения тестов
+- ### График прохождения тестов
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screenshots/allure_schedule.png">
 </p>
 
 ## :rocket: Интеграция с Allure TestOps
-- ### Экран с результатами запуска тестов
+- ### Результаты запуска тестов
 <p align="center">
 <img title="TestOps Launch Page" src="images/screenshots/test_results_ATO.png">
 </p>
 
-- ### Экран с launches после интеграции с IDE + график
+- ### Launches после интеграции с IDE + график
 <p align="center">
 <img title="TestOps Launch Page" src="images/screenshots/launches_ATO.png">
 </p>
 
-- ### Экран с дашбордами и тестами в TestOps auto + manual
+- ### Дашборды с ручными и авто тестами
 <p align="center">
 <img title="TestOps Launch Page" src="images/screenshots/dashboards_ATO.png">
 </p>
 
-- ### Страница с тест кейсами в TestOps
+- ### Тест кейсы
 <p align="center">
 <img title="TestOps tests page" src="images/screenshots/test_cases_ATO.png">
 </p>
 
-- ### Страница с тест ранами в TestOps auto + manual
+- ### Запуски с ручными и авто тестами
 <p align="center">
 <img title="TestOps tests page" src="images/screenshots/test_runs_ATO.png">
 </p>
 
 ## :rocket: Интеграция с Jira
-- ### Страница с задачей в Jira
+- ### Задачей в Jira
 <p align="center">
 <img title="Jira issue" src="images/screenshots/jira_issue.png">
 </p>

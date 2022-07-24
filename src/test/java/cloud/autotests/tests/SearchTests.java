@@ -1,8 +1,7 @@
 package cloud.autotests.tests;
 
-import cloud.autotests.selectors.MainPageSelectors;
-import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.SelenideElement;
+import cloud.autotests.pages.Main;
+import cloud.autotests.pages.Search;
 import com.github.javafaker.Faker;
 import io.qameta.allure.AllureId;
 import org.junit.jupiter.api.DisplayName;
@@ -12,16 +11,13 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-public class SearchTests extends TestBase implements
-        MainPageSelectors {
+public class SearchTests extends TestBase {
 
-    ElementsCollection content = $$(".s-post-summary--content h3");
-    SelenideElement searchResult = $(".js-search-results .ta-center b");
+    Main mainPageElements = new Main();
+    Search searchPage = new Search();
 
     @ValueSource(strings = {
             "Allure",
@@ -34,11 +30,11 @@ public class SearchTests extends TestBase implements
     void positiveTest1(String valueName) {
         step("Search request sending", () -> {
             open("");
-            search.setValue(valueName).pressEnter();
+            mainPageElements.search.setValue(valueName).pressEnter();
         });
 
         step("Tile should have text '{0}'", () -> {
-            content.filterBy(text(valueName)).shouldHave(sizeGreaterThan(0));
+            searchPage.content.filterBy(text(valueName)).shouldHave(sizeGreaterThan(0));
         });
     }
 
@@ -48,14 +44,14 @@ public class SearchTests extends TestBase implements
     void noResultsTest() {
         Faker faker = new Faker();
         String value = faker.chuckNorris().fact();
-        step("main page open", () -> {
+        step("Main page open", () -> {
             open("/");
-            search.setValue(value).pressEnter();
+            mainPageElements.search.setValue(value).pressEnter();
         });
 
         step("Search result equal 0", () -> {
-            searchResult.parent().shouldHave(text("Нам не удалось ничего найти по фразе"));
-            searchResult.shouldHave(text(value));
+            searchPage.searchResult.parent().shouldHave(text("Нам не удалось ничего найти по фразе"));
+            searchPage.searchResult.shouldHave(text(value));
         });
     }
 }

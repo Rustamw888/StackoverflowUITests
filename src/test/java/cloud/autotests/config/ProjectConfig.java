@@ -17,5 +17,9 @@ public interface ProjectConfig extends Config {
     String browserSize();
     String browserMobileView();
     String remoteDriverUrl();
+    @DefaultValue("https://ru.stackoverflow.com")
+    String platformUrl();
+    String login();
+    String pass();
     String videoStorage();
 }
