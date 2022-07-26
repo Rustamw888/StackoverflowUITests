@@ -31,7 +31,7 @@ public class TestBase {
         Configuration.baseUrl = System.getProperty("base_url");
         Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserSize = System.getProperty("browsersize");
-        Configuration.remote = "https://" + config.selenoidLogin() + ":" + config.selenoidPass() + "@" + System.getProperty("selenoid_server");
+        Configuration.remote = "https://" + config.login() + ":" + config.pass() + "@" + System.getProperty("selenoid_server");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
